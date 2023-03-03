@@ -1,6 +1,8 @@
 services:
-  py:
-    image: youtubeimagen:latest
-    build: .
+  python:
+    image: python:3-alpine
     volumes:
-      - ./app:/usr/src/app
+        - ./app : /usr/src/app
+    stdin_open: true
+    tty: true
+    working_dir: /usr/src/app
